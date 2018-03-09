@@ -1,7 +1,7 @@
 .ui-content {
     /*font-family: Algerian;*/
     background-color: #FFF !important;
-    font-family: 'Krona One', sans-serif !important;
+    font-family: 'Quicksand', sans-serif, cursive !important;
 }
 
 .front-pic {
@@ -21,7 +21,7 @@
     position: relative;
     color: black;
     font-size: 15px;
-    font-family: 'Krona One', sans-serif !important;
+    font-family: 'Quicksand', sans-serif, cursive !important;
 }
 
 .button1 {
@@ -37,7 +37,7 @@
     position: relative !important;
     background-color: #59B3C2 !important;
     color: white!important;
-    font-family: 'Krona One', sans-serif !important;
+    font-family: 'Quicksand', sans-serif, cursive !important;
   height: 35px !important;
   text-align: center !important;
   font-size: 22px !important;
@@ -57,7 +57,7 @@
     position: relative !important;
     background-color: #59B3C2 !important;
     color: white!important;
-    font-family: 'Krona One', sans-serif !important;
+    font-family: 'Quicksand', sans-serif, cursive !important;
   height: 25px !important;
   text-align: center !important;
   font-size: 20px !important;
@@ -117,7 +117,7 @@
     position: relative !important;
     background-color: #FFF !important;
     color: black!important;
-    font-family: 'Krona One', sans-serif !important;
+    font-family: 'Quicksand', sans-serif, cursive !important;
     height: 20px;
   font-size: 15px !important;
 }
@@ -146,7 +146,7 @@
     position: relative !important;
     background-color: #59B3C2 !important;
     color: white!important;
-    font-family: 'Krona One', sans-serif !important;
+    font-family: 'Quicksand', sans-serif, cursive !important;
     height: 50px !important;
     font-size: 17px !important;
   text-align: center !important;
@@ -165,7 +165,7 @@
     position: relative !important;
     background-color: #59B3C2 !important;
     color: white!important;
-    font-family: 'Krona One', sans-serif !important;
+    font-family: 'Quicksand', sans-serif, cursive !important;
     height: 50px !important;
     font-size: 17px !important;
   text-align: center !important;
@@ -189,7 +189,7 @@
     position: relative !important;
     background-color: #59B3C2 !important;
     color: white!important;
-    font-family: 'Krona One', sans-serif !important;
+    font-family: 'Quicksand', sans-serif, cursive !important;
   height: 25px !important;
   text-align: center !important;
   font-size: 20px !important;
