@@ -158,29 +158,29 @@
             </label>
             <ul>
                 <li>
-                    <a href="http://monterey.org/">
-                        Monterey.org
+                    <a href="https://imgur.com/">
+                        Imgur.com
                     </a>
                 </li>
                 <li>
-                  <a href="https://pixabay.com/">
-                      Pixabay.com
+                  <a href="https://www.brandcrowd.com/">
+                      BrandCrowd.com
                     </a>
                 </li>
             </ul>
             <br/>
             <label>
-                Facts:
+                Convolutional Neural Network:
             </label>
             <ul>
                 <li>
-                    <a href="http://www.fao.org/save-food/resources/keyfindings/en/">
-                        Fao.org
+                    <a href="https://www.coursera.org/">
+                        Coursera.org
                     </a> 
                 </li>
                 <li>
-                    <a href="https://foodtank.com/news/2015/06/world-environment-day-10-facts-about-food-waste-from-bcfn/">
-                        FoodTank.com
+                    <a href="https://isic-archive.com/">
+                        ISIC Archive
                     </a>
                 </li>
                 <li>
@@ -802,97 +802,45 @@ thefoodcollector.2017@gmail.com</a>
 
 
 
-        <div data-role="page" id="info">
-            <div data-role="header">
-                <div class="icon-bar">
-                    <a href="#home"><i class="fa fa-home"></i></a>
-                    <a class="active" href="#info"><i class="fa fa-question-circle"></i></a> 
-                    <a href="#code"><i class="fa fa-code"></i></a>
-                </div>
-            </div>
-            <div role="main" class="ui-content">
-                <h2 id="p2">Food Collection Points Near Me</h2>
-                <hr/>
-                <br/>
-                <p>(Please resize this window to activate Google Maps and make sure your Location Services is on.) </p>
-                <p> Disclaimer: The above bookmarked places are used solely for functionality demonstration purposes for the Food Collection Web App prototype. </p>
-                <br/>
-                <div id="mapContainer" style="">
-                    <div id="map" style="width: 500px; height: 500px;"></div>
-                </div>
+    <div data-role="page" id="info">
+        <div data-role="header">
+            <div class="icon-bar">
+                <a href="#home"><i class="fa fa-home"></i></a>
+                <a class = "active" href="#info"><i class="fa fa-question-circle"></i></a>
+                <a href="#code"><i class="fa fa-code"></i></a>
+                
             </div>
         </div>
-    <div id="map"></div>
-    <script>
-        // Note: This example requires that you consent to location sharing when
-        // prompted by your browser. If you see the error "The Geolocation service
-        // failed.", it means you probably did not give permission for the browser to
-        // locate you.
-        var locations = [
-            ['Feeding Hong Kong', 22.295278, 114.234936, 4],
-            ['FoodWise - Central', 22.281714, 114.151449, 5],
-            ['St. James\' Settlement Sai On Centre', 22.286829, 114.138517, 3],
-            ['FoodWise - 九龍站', 22.304304, 114.161474, 2],
-            ['FoodWise - 土瓜灣', 22.319879, 114.188424, 1],
-            ['FoodWise - 筲箕灣', 22.279338, 114.230236, 6],
-        ];
-        var map, infoWindow;
-
-        function initMap() {
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: {
-                    lat: -34.397,
-                    lng: 150.644
-                },
-                zoom: 12
-            });
-            infoWindow = new google.maps.InfoWindow;
-            var marker, i;
-
-            for (i = 0; i < locations.length; i++) {
-                marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-                    disableAutoPan: false,
-                    label: locations[i][0],
-                    map: map
-                });
-
-
-                // Try HTML5 geolocation.
-                if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(function(position) {
-                        var pos = {
-                            lat: position.coords.latitude,
-                            lng: position.coords.longitude
-                        };
-
-                        infoWindow.setPosition(pos);
-                        infoWindow.setContent('Location found.');
-                        infoWindow.open(map);
-                        map.setCenter(pos);
-                    }, function() {
-                        handleLocationError(true, infoWindow, map.getCenter());
-                    });
-                } else {
-                    // Browser doesn't support Geolocation
-                    handleLocationError(false, infoWindow, map.getCenter());
-                }
-            }
-
-            function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-                infoWindow.setPosition(pos);
-                infoWindow.setContent(browserHasGeolocation ?
-                    'Error: The Geolocation service failed.' :
-                    'Error: Your browser doesn\'t support geolocation.');
-                infoWindow.open(map);
-            }
-
-
-
-        }
-    </script>
-
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXLeQ5Ia0Dan3tatTDjcPRkTcUtcpu_9w&callback=initMap"></script>
+        <div role="main" class="ui-content">
+            <h1> <span style="color: #59B3C2;">About our project</span></h1>
+            <hr/>
+            <p> <strong>Ideation </strong> </p> 
+<br/>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<br/>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<br/>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<br/>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<br/>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div data-role="footer">
+            <a href="#TOS" data-role="button" data-transition="flip" class="button2">Terms of Service</a>
+            <a href="#PP" data-role="button" data-transition="flip" class="button2">Privacy Policy</a>
+            <a href="#contact" data-role="button" data-transition="flip" class="button2">Contact Us</a>
+            <a href="#about" data-role="button" data-transition="flip" class="button2">About Us</a>
+            <a href="#credits" data-role="button" data-transition="flip" class="button2">Credits</a>
+            <form class="form2" action="https://formspree.io/thefoodcollector.2017@gmail.com" method="POST">
+                <input name="name2" class="newsletter" placeholder="Full Name" type="text" required/>
+                <br/>
+                <input name="name2" class="newsletter" placeholder="Email" type="email" required/>
+                <button id="subscribe" type="submit">Subscribe to Newsletter </button>
+            </form>
+            <p id="c"> © 2017 Prometheus. All rights reserved. </p>
+        </div>
+    </div>
 </body>
 
 </html>
