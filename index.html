@@ -13,6 +13,18 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDmsqDhU4pcWMscll3Ep4Isb99C91NBzWw",
+        authDomain: "prometheus-70c6e.firebaseapp.com",
+        databaseURL: "https://prometheus-70c6e.firebaseio.com",
+        projectId: "prometheus-70c6e",
+        storageBucket: "prometheus-70c6e.appspot.com",
+        messagingSenderId: "678743146036"
+      };
+      firebase.initializeApp(config);
+    </script>
     <style>
         /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
@@ -546,14 +558,32 @@ prometheuscnn@gmail.com</a>
             <div class="icon-bar">
                 <a href="#home"><i class="fa fa-home"></i></a>
                 <a href="#info"><i class="fa fa-question-circle"></i></a>
-                <a class="active" href="#code"><i class="fa fa-code"></i></a>
+                <a class = "active" href="#code"><i class="fa fa-code"></i></a>
+                
             </div>
         </div>
         <div role="main" class="ui-content">
-                <h2 align="center">What kind of food would like to submit?</h2>
-            <h5><a href="#Leftovers" data-role="button" data-transition="flip" class="button1">Leftovers (Post-consumer)</a></h5>
-            <h5><a href="#Snacks" data-role="button" data-transition="flip" class="button1">Packaged Snacks (unexpired)</a></h5>
-        </div>
+            <h1> <span style="color: #59B3C2;">About Prometheus</span></h1>
+            <hr/>
+            <p> <strong>What is a convolutional neural network?</strong> </p> 
+<br/>
+<p>A class of deep, feed-forward artificial neural networks. Different from over neural networks, the convolutional neural network (CNN) employs the convolutional function in the convolution layer, along with pooling and fully connected layers. Taking inspiration from biological processes of the animal visual cortex, the CNN is a type of neural network proven to be very successful in image recognition tasks.</p>
+<br/>
+            <p> <strong>What do I input to the convolutional neural network</strong> </p> 
+<br/>
+<p>Prometheus takes jpeg images as input from users. We then turn the image into a 3D numpy array, resize and normalize the data, and then save the jpeg file to an hdf5 file "testing_data".</p>
+<br/>
+<p><strong>What is the output of the convolutional neural network?</strong></p>
+<br/>
+<p>The convolutional neural network calculates and outputs in the probability (denoted by y-hat) of the inputted mole image being malignant melanoma.</p>
+<br/>
+<p><strong>How accurate is the convolutional neural network's calculation?</strong></p>
+<br/>
+<p>Due to time constraints, we have not been able to perfect our convolutional neural network model. However, our convolutional neural network has been estimated to perform medical diagnosis with above 70% accuracy, which rivals that of professional diagnosticians.</p>
+<p><strong>How can I get involved in this project?</strong></p>
+<br/>
+<p>Developers, melanoma ptients, and users alike are all welcome to contribute to the Prometheus project. Interested developers may refer to the Github repository (https://github.com/chinglamchoi/Prometheus), where all convolutional neural network and Prometheus app protoype files are available open source. Melanoma ptients can contribute to the cause by submitting images of medically diagnosed melanoma moles, which can effectively enhance our melanoma dataset. Users can contribute by submitting mole images via the "Detect Melanoma" button, which helps Prometheus developers better assess the accuracy of our CNN.</p>
+</div>
         <div data-role="footer">
             <a href="#TOS" data-role="button" data-transition="flip" class="button2">Terms of Service</a>
             <a href="#PP" data-role="button" data-transition="flip" class="button2">Privacy Policy</a>
@@ -564,7 +594,7 @@ prometheuscnn@gmail.com</a>
                 <input name="name2" class="newsletter" placeholder="Full Name" type="text" required/>
                 <br/>
                 <input name="name2" class="newsletter" placeholder="Email" type="email" required/>
-                <button id="subscribe" type="submit">Subscribe to Newsletter</button>
+                <button id="subscribe" type="submit">Subscribe to Newsletter </button>
             </form>
             <p id="c"> © 2018 Prometheus. All rights reserved. </p>
         </div>
@@ -582,25 +612,48 @@ prometheuscnn@gmail.com</a>
             </div>
         </div>
         <div role="main" class="ui-content">
-            <h1> <span style="color: #59B3C2;">Parkinsons' Disease Facts</span></h1>
+            <h1> <span style="color: #59B3C2;">Prometheus</span></h1>
             <hr/>
-            <p> <strong>Parkinson's Disease leading contributor to XXX and XXX issues globally. </strong> </p> 
+            <p> <strong>The Prometheus Team</strong> </p> 
 <br/>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Our team comprises 4 Form 3 students from the Diocesan Girls' School, Hong Kong. We are Choi Ching Lam, Miko Leung, Anna Chiu, and Olga Kwan. </p>
 <br/>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p> <strong>Choi Ching Lam</strong> </p> 
 <br/>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<ul>
+<li>Prometheus' idea creator and developer for the convolutional neural network and Prometheus application.</li>
+<li>Is passionate about artificial intelligence, aspires to be a college Computer Science major at MIT, and go into academia.</li>
+<li>Github: https://github.com/chinglamchoi</li>
+</ul>
 <br/>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p> <strong>Miko Leung</strong> </p> 
 <br/>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<ul>
+<li>Prometheus' video editor and designer.</li>
+<li>Math enthusiast who is forever preoccupied with maths. Aspires to be a doctor who saves lives.</li>
+<li>Github: https://github.com/gflareon</li>
+</ul>
+<br/>
+<p> <strong>Anna Chiu</strong> </p> 
+<br/>
+<ul>
+<li>Prometheus' business plan writer.</li>
+<li>Enjoys biology and chemistry. </li>
+<li>Aspires to become a medical doctor.</li>
+</ul>
+<br/>
+<p> <strong>Olga Kwan</strong> </p> 
+<br/>
+<ul>
+<li>Prometheus' editor.</li>
+<li>Passionate about literature and public speaking.</li>
+<li>Humanitarian who ejoys speaking up for those who aren't heard.</li>
+</ul>
         </div>
         <div data-role="footer">
             <a href="#TOS" data-role="button" data-transition="flip" class="button2">Terms of Service</a>
             <a href="#PP" data-role="button" data-transition="flip" class="button2">Privacy Policy</a>
-            <a href="#contact" data-role="button" data-transition="flip" class="button2">Contact Us</a>
-             
+            <a href="#contact" data-role="button" data-transition="flip" class="button2">Contact Us</a> 
             <a href="#credits" data-role="button" data-transition="flip" class="button2">Credits</a>
             <form class="form2" action="https://formspree.io/prometheuscnn@gmail.com" method="POST">
                 <input name="name2" class="newsletter" placeholder="Full Name" type="text" required/>
