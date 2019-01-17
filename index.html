@@ -1,10 +1,14 @@
+<!-- <a href="tel:60733637">60733637</a> -->
+<!-- ctrl-f JEFFREY -->
+<!-- ?? tags, email, ids -->
+
 <!DOCTYPE html>
 <html>
 <head>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <!-- INCLUDES JQUERY LIBRARY -->
     <link rel="stylesheet" type="text/css" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
@@ -12,7 +16,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+    <script>
+        function functionAlert(msg, myYes) {
+            var confirmBox = $("#confirm");
+            confirmBox.find(".message").text(msg);
+            confirmBox.find(".yes").unbind().click(function() {
+                confirmBox.hide();
+            });
+            confirmBox.find(".yes").click(myYes);
+            confirmBox.show();
+        }
+    </script>
+<!--     <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script> -->
   
 <!--     <script>
       // Initialize Firebase
@@ -26,22 +41,296 @@
       };
       firebase.initializeApp(config);
     </script> -->
-  
+
     <style>
-        /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-        #map {
-            height: 100%;
+        .ui-content {
+            /*font-family: Algerian;*/
+            background-color: #FFF !important;
+            font-family: 'Quicksand', sans-serif !important;
         }
-        /* Optional: Makes the sample page fill the window. */
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
+        .front-pic {
+            width: 300px !important;
+            height: 300px !important;
         }
+        #back2 {
+            margin: 2em auto;
+            display: block;
+            border: 6px solid rgba(255, 255, 255, 0.45);
+            border-radius: 50px;
+            padding: 0.5em 2em;
+            /*background-repeat: no-repeat;
+          background-size: 100%;*/
+            background-clip: padding-box;
+            position: relative;
+            color: black;
+            font-size: 15px;
+            font-family: 'Quicksand', sans-serif !important;
+        }
+        .button1 {
+            margin: 2em auto !important;
+            display: block !important;
+            border: 6px solid rgba(255, 255, 255, 0.45) !important;
+            border-radius: 50px !important;
+            padding: 0.5em 2em !important;
+            border-color: #59B3C2 !important;
+            background-repeat: no-repeat !important;
+            background-size: 100% !important;
+            background-clip: padding-box !important;
+            position: relative !important;
+            background-color: #59B3C2 !important;
+            color: white!important;
+            font-family: 'Quicksand', sans-serif !important;
+          height: 35px !important;
+          text-align: center !important;
+          font-size: 22px !important;
+        }
+        #down {
+            text-align: center;
+            font-size: 60px;
+            margin-top: 0px;
+        }
+        .button3 {
+            margin: 2em auto !important;
+            display: block !important;
+            border: 6px solid rgba(255, 255, 255, 0.45) !important;
+            border-radius: 50px !important;
+            padding: 0.5em 2em !important;
+            border-color: #59B3C2 !important;
+            background-repeat: no-repeat !important;
+            background-size: 100% !important;
+            background-clip: padding-box !important;
+            position: relative !important;
+            background-color: #59B3C2 !important;
+            color: white!important;
+            font-family: 'Quicksand', sans-serif !important;
+          height: 25px !important;
+          text-align: center !important;
+          font-size: 20px !important;
+        }
+        #w{
+          font-size: 25px !important;
+        }
+        #p2 {
+            color: #59B3C2!important;
+            font-size: 35px !important;
+        }
+        .icon-bar {
+            width: 100%;
+            /* Full-width */
+            background-color: #555;
+            /* Dark-grey background */
+            overflow: auto;
+        }
+        .icon-bar a {
+            float: left;
+            /* Float links side by side */
+            text-align: center !important;
+            /* Center-align text */
+            width: 25%;
+            /* Equal width (5 icons with 20% width each = 100%)
+            padding: 12px 0; /* Some top and bottom padding */
+            transition: all 0.3s ease;
+            /* Add transition for hover effects */
+            color: #FFF !important;
+            /* White text color */
+            font-size: 45px;
+            /* Increased font size */
+          height: 60px !important;
+        }
+        .icon-bar a:hover {
+            background-color: #000;
+            /* Add a hover color */
+        }
+        .active {
+            background-color: #59B3C2;
+            /* Add an active/current color */
+        }
+        .green {
+            color: #59B3C2 !important;
+        }
+        .button2 {
+            background-repeat: no-repeat !important;
+            background-size: 100% !important;
+            position: relative !important;
+            background-color: #FFF !important;
+            color: black!important;
+            font-family: 'Quicksand', sans-serif !important;
+            height: 20px;
+          font-size: 15px !important;
+        }
+        .newsletter {
+            height: 50px;
+            width: 50px;
+        }
+        /*#form2.ui-input-text{
+          height: 500px;
+          width: 50%;
+        }*/
+        #subscribe {
+            margin: 2em auto !important;
+            display: block !important;
+            border: 6px solid rgba(255, 255, 255, 0.45) !important;
+            border-radius: 50px !important;
+            padding: 0.5em 2em !important;
+            border-color: #59B3C2 !important;
+            background-repeat: no-repeat !important;
+            background-size: 100% !important;
+            background-clip: padding-box !important;
+            position: relative !important;
+            background-color: #59B3C2 !important;
+            color: white!important;
+            font-family: 'Quicksand', sans-serif !important;
+            height: 50px !important;
+            font-size: 17px !important;
+          text-align: center !important;
+        }
+        .subscribe2{
+          margin: 2em auto !important;
+            display: block !important;
+            border: 6px solid rgba(255, 255, 255, 0.45) !important;
+            border-radius: 50px !important;
+            padding: 0.5em 2em !important;
+            border-color: #59B3C2 !important;
+            background-repeat: no-repeat !important;
+            background-size: 100% !important;
+            background-clip: padding-box !important;
+            position: relative !important;
+            background-color: #59B3C2 !important;
+            color: white!important;
+            font-family: 'Quicksand', sans-serif !important;
+            height: 50px !important;
+            font-size: 17px !important;
+          text-align: center !important;
+        }
+        #c {
+          font-size: 15px !important;
+          color: #666666 !important;
+        }
+        
+        
+        .green1 {
+            font-size: 25px !important;
+            color: #59B3C2 !important;
+        }
+        
+        .button3 {
+            margin: 2em auto !important;
+            display: block !important;
+            border: 6px solid rgba(255, 255, 255, 0.45) !important;
+            border-radius: 50px !important;
+            padding: 0.5em 2em !important;
+            border-color: #59B3C2 !important;
+            background-repeat: no-repeat !important;
+            background-size: 100% !important;
+            background-clip: padding-box !important;
+            position: relative !important;
+            background-color: #59B3C2 !important;
+            color: white!important;
+            font-family: 'Quicksand', sans-serif !important;
+          height: 25px !important;
+          text-align: center !important;
+          font-size: 20px !important;
+        }
+        * ul {list-style-type: none;}
+        body {font-family: Verdana, sans-serif;}
+        .month {
+          padding: 70px 25px;
+          width: 100%;
+          background: #1abc9c;
+          text-align: center;
+          box-sizing: border-box !important;
+        }
+        .month ul {
+          margin: 0;
+          padding: 0;
+        }
+        .month ul li {
+          color: white;
+          font-size: 30px;
+          text-transform: uppercase;
+          letter-spacing: 3px;
+        }
+        .month .prev {
+          float: left;
+          padding-top: 15x;
+        }
+        .month .next {
+          float: right;
+          padding-top: 10px;
+        }
+        .weekdays {
+          margin: 0;
+          padding: 20px 0;
+          background-color: #ddd;
+        }
+        .weekdays li {
+          display: inline-block;
+          width: 13.6%;
+          color: #666;
+          font-size:25px;
+          text-align: center;
+        }
+        .days {
+          padding: 15px 0;
+          background: #eee;
+          margin: 0;
+        }
+        .days li {
+          list-style-type: none;
+          display: inline-block;
+          width: 13.6%;
+          text-align: center;
+          margin-bottom: 20px;
+          font-size:25px;
+          color: #777;
+        }
+        .days li .active {
+          padding: 15px;
+          background: #1abc9c;
+          color: white !important
+        }
+        /* Add media queries for smaller screens */
+        @media screen and (max-width:720px) {
+          .weekdays li, .days li {width: 13.1%;}
+        }
+        @media screen and (max-width: 420px) {
+          .weekdays li, .days li {width: 12.5%;}
+          .days li .active {padding: 2px;}
+        }
+        @media screen and (max-width: 290px) {
+          .weekdays li, .days li {width: 12.2%;}
+        }
+        /* Styling for alert JEFFREY*/ 
+        #confirm {
+            display: none;
+            background-color: #F3F5F6;
+            color: #000000;
+            border: 1px solid #aaa;
+            position: fixed;
+            width: 300px;
+            height: 280px;
+            left: 25%;
+            right: 40%;
+            bottom: 40%;
+            box-sizing: border-box;
+            text-align: center;
+         }
+         #confirm button {
+            background-color: #FFFFFF;
+            display: inline-block;
+            border-radius: 12px;
+            border: 4px solid #aaa;
+            padding: 5px;
+            text-align: center;
+            width: 60px;
+            cursor: pointer;
+         }
+         #confirm .message {
+            text-align: left;
+         }
     </style>
 </head>
+
 
 
 
@@ -50,22 +339,48 @@
         <div data-role="header">
             <div class="icon-bar">
                 <a class="active" href="#home"><i class="fa fa-home"></i></a>
+                <a href="#address"><i class="fa fa-address-book"></i></a>
+                <a href="#tips"><i class="fa fa-lightbulb-o"></i></a>
                 <a href="#info"><i class="fa fa-question-circle"></i></a>
-                <a href="#code"><i class="fa fa-code"></i></a>
                 
             </div>
         </div>
         <div role="main" class="ui-content" align="center">
-            <strong><h2 id="p2">Prometheus</h2></strong>
+            <strong><h2 id="p2">Project Health</h2></strong>
             <a href="#LearnMore" data-transition="flip">
                 <img src="https://i.imgur.com/NgR0PdH.jpg" class="front-pic"/>
             </a>
             <h3 align="center" id="w">
-<!--                 <bold>Welcome!</bold> -->
-              <a href="tel:60733637">60733637</a>
+                <bold>Take Pill in: </bold>
+                <bold> <p id="down"></p> </bold>
             </h3>
-            <p><a href="#detect" data-role="button" data-transition="flip" class="button1">Detect Melanoma</a></p>
-            <p><a href="#cure" data-role="button" data-transition="flip" class="button1">Help Cure Cancer</a></p>
+            <p><a href="#schedule" data-role="button" data-transition="flip" class="button1">My Schedule</a></p> 
+
+                <script>
+                // SET DATE TIME JEFFREY
+                var countDownDate = new Date("Jan 18, 2019 16:10:00").getTime();
+                // Update the count down every 1 second
+                var x = setInterval(function() {
+                  var now = new Date().getTime();
+                  var distance = countDownDate - now;
+                    
+                  // Includes days, hours, minutes and seconds
+                  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                    
+                  // Output 
+                  document.getElementById("down").innerHTML = days + "d " + hours + "h "
+                  + minutes + "m " + seconds + "s ";
+                    
+                  // IF COUNT DOWN IS OVER, DO STH JEFFREY
+                  if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("down").innerHTML = "EXPIRED";
+                  }
+                }, 1000);
+                </script>
         </div>
         <div data-role="footer">
             <div>
@@ -74,30 +389,415 @@
                 <a href="#contact" data-role="button" data-transition="flip" class="button2">Contact Us</a>
                  
                 <a href="#credits" data-role="button" data-transition="flip" class="button2">Credits</a>
-                <form class="form2" action="https://formspree.io/prometheuscnn@gmail.com" method="POST">
+                <form class="form2" action="https://formspree.io/projecthealthdgs@gmail.com" method="POST">
                     <input name="name2" class="newsletter" placeholder="Full Name" type="text" required/>
                     <br/>
                     <input name="name2" class="newsletter" placeholder="Email" type="email" required/>
                     <button id="subscribe" type="submit">Subscribe to Newsletter</button>
                 </form>
-                <p id="c"> © 2018 Prometheus. All rights reserved. </p>
+                <p id="c"> © 2019 Team Asclepius. All rights reserved. </p>
             </div>
         </div>
     </div>
 
 
+<div data-role="page" id="schedule">
+    <div data-role="header">
+        <div class="icon-bar">
+        <a href="#home"><i class="fa fa-home"></i></a>
+        <a href="#address"><i class="fa fa-address-book"></i></a>
+        <a href="#tips"><i class="fa fa-lightbulb-o"></i></a>
+        <a href="#info"><i class="fa fa-question-circle"></i></a>
+        </div>
+    </div>
+    <div role="main" class="ui-content">
+            <h2 class="green1" align="center">My Schedule</h2>
+                <div class="month">      
+                    <ul>
+                        <li class="prev">&#10094;</li>
+                        <li class="next">&#10095;</li>
+                        <li>
+                            January<br>
+                            <span style="font-size:25px">2019</span>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="weekdays">
+                    <li>Su</li>
+                    <li>Mo</li>
+                    <li>Tu</li>
+                    <li>We</li>
+                    <li>Th</li>
+                    <li>Fr</li>
+                    <li>Sa</li>
+                </ul>
+                <ul class="days">
+                    <li></li>
+                    <li></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">1</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">2</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">3</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">4</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">5</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">6</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">7</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">8</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">9</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">10</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">11</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">12</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">13</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">14</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">15</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">16</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">17</a></li>
+                    <li><span class="active"><a href="#" onClick="MyWindow=window.open('https://chinglamchoi.github.io/project_health/#schedule1', 'MyWindow', 'width=600, height=300'); return false;">18</span></a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">19</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">20</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">21</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">22</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">23</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">24</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">25</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">26</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">27</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">28</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">29</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">30</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">31</a></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <br>
+                <br>
+    </div>
+    <div data-role="footer">
+        <a href="#TOS" data-role="button" data-transition="flip" class="button2">Terms of Service</a>
+        <a href="#PP" data-role="button" data-transition="flip" class="button2">Privacy Policy</a>
+        <a href="#contact" data-role="button" data-transition="flip" class="button2">Contact Us</a>                 
+        <a href="#credits" data-role="button" data-transition="flip" class="button2">Credits</a>
+        <form class="form2" action="https://formspree.io/projecthealthdgs@gmail.com" method="POST">
+            <input name="name2" class="newsletter" placeholder="Full Name" type="text" required/>
+            <br/>
+            <input name="name2" class="newsletter" placeholder="Email" type="email" required/>
+            <button id="subscribe" type="submit">Subscribe to Newsletter</button>
+        </form>
+        <p id="c"> © 2019 Team Asclepius. All rights reserved. </p>
+    </div>
+</div>
 
-    <div data-role="page" id="contact">
+
+
+
+
+
+
+<div data-role="page" id="schedule1">
+    <div data-role="header">
+    </div>
+    <div role="main" class="ui-content">
+            <h2 class="green1" align="center">My Schedule</h2>
+                <div class="month">      
+                    <ul>
+                        <li class="prev">&#10094;</li>
+                        <li class="next">&#10095;</li>
+                        <li>
+                            January<br>
+                            <span style="font-size:25px">2019</span>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="weekdays">
+                    <li>Su</li>
+                    <li>Mo</li>
+                    <li>Tu</li>
+                    <li>We</li>
+                    <li>Th</li>
+                    <li>Fr</li>
+                    <li>Sa</li>
+                </ul>
+                <ul class="days">
+                    <li></li>
+                    <li></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">1</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">2</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">3</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">4</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">5</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">6</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">7</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">8</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">9</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">10</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">11</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">12</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">13</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">14</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">15</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">16</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">17</a></li>
+                    <li><span class="active"><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">18</span></a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">19</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">20</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">21</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">22</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">23</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">24</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">25</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">26</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">27</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">28</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">29</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">30</a></li>
+                    <li><a href="#" onClick="MyWindow=window.open('https://google.com', 'MyWindow', 'width=600, height=300'); return false;">31</a></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <br>
+                <br>
+    </div>
+    <div data-role="footer">
+        <a href="#TOS" data-role="button" data-transition="flip" class="button2">Terms of Service</a>
+        <a href="#PP" data-role="button" data-transition="flip" class="button2">Privacy Policy</a>
+        <a href="#contact" data-role="button" data-transition="flip" class="button2">Contact Us</a>                 
+        <a href="#credits" data-role="button" data-transition="flip" class="button2">Credits</a>
+        <form class="form2" action="https://formspree.io/projecthealthdgs@gmail.com" method="POST">
+            <input name="name2" class="newsletter" placeholder="Full Name" type="text" required/>
+            <br/>
+            <input name="name2" class="newsletter" placeholder="Email" type="email" required/>
+            <button id="subscribe" type="submit">Subscribe to Newsletter</button>
+        </form>
+        <p id="c"> © 2019 Team Asclepius. All rights reserved. </p>
+    </div>
+</div>
+
+
+
+
+
+    <div data-role="page" id="LearnMore">
         <div data-role="header">
             <div class="icon-bar">
                 <a href="#home"><i class="fa fa-home"></i></a>
+                <a href="#address?"><i class="fa fa-address-book"></i></a>
+                <a href="#tips"><i class="fa fa-lightbulb-o"></i></a>
                 <a href="#info"><i class="fa fa-question-circle"></i></a>
-                <a href="#code"><i class="fa fa-code"></i></a>
+            </div>
+        </div>
+        <div role="main" class="ui-content">
+            <h1> <span style="color: #59B3C2;">Project Health</span></h1>
+            <hr/>
+            <p> <strong>TEAM ASCLEPIUS</strong> </p> 
+            <br/>
+            <p>Our team comprises 4 Form 3 students from the Diocesan Girls' School, Hong Kong. We are Choi Ching Lam, Miko Leung, Anna Chiu, and Olga Kwan. </p>
+            <br/>
+            <p> <strong>Choi Ching Lam</strong> </p> 
+            <br/>
+            <ul>
+            <li>Project Health' idea creator and developer for the convolutional neural network and Project Health application.</li>
+            <li>Is passionate about artificial intelligence, aspires to be a college Computer Science major at MIT, and go into academia.</li>
+            <li>Github: https://github.com/chinglamchoi</li>
+            </ul>
+            <br/>
+            <p> <strong>Miko Leung</strong> </p> 
+            <br/>
+            <ul>
+            <li>Project Health' video editor and designer.</li>
+            <li>Math enthusiast who is forever preoccupied with maths. Aspires to be a doctor who saves lives.</li>
+            <li>Github: https://github.com/gflareon</li>
+            </ul>
+            <br/>
+            <p> <strong>Anna Chiu</strong> </p> 
+            <br/>
+            <ul>
+            <li>Project Health' business plan writer.</li>
+            <li>Enjoys biology and chemistry. </li>
+            <li>Aspires to become a medical doctor.</li>
+            </ul>
+            <br/>
+            <p> <strong>Olga Kwan</strong> </p> 
+            <br/>
+            <ul>
+            <li>Project Health' editor.</li>
+            <li>Passionate about literature and public speaking.</li>
+            <li>Humanitarian who ejoys speaking up for those who aren't heard.</li>
+            </ul>
+        </div>
+        <div data-role="footer">
+            <a href="#TOS" data-role="button" data-transition="flip" class="button2">Terms of Service</a>
+            <a href="#PP" data-role="button" data-transition="flip" class="button2">Privacy Policy</a>
+            <a href="#contact" data-role="button" data-transition="flip" class="button2">Contact Us</a> 
+            <a href="#credits" data-role="button" data-transition="flip" class="button2">Credits</a>
+            <form class="form2" action="https://formspree.io/projecthealthdgs@gmail.com" method="POST">
+                <input name="name2" class="newsletter" placeholder="Full Name" type="text" required/>
+                <br/>
+                <input name="name2" class="newsletter" placeholder="Email" type="email" required/>
+                <button id="subscribe" type="submit">Subscribe to Newsletter </button>
+            </form>
+            <p id="c"> © 2019 Team Asclepius. All rights reserved. </p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+   <div data-role="page" id="cure">
+        <div data-role="header">
+            <div class="icon-bar">
+                <a href="#home"><i class="fa fa-home"></i></a>
+                <a href="#address"><i class="fa fa-address-book"></i></a>
+                <a href="#tips"><i class="fa fa-lightbulb-o"></i></a>
+                <a href="#info"><i class="fa fa-question-circle"></i></a>
+                </div>
+        </div>
+
+        <div role="main" class="ui-content">
+            <h2 align="center">Has your melanoma mole been medically diagnosed?</h2>    
+            <h5><a href="#dataset" data-role="button" data-transition="flip" class="button1">Yes</a></h5>
+            <h5><a href="#home" data-role="button" data-transition="flip" class="button1">No</a></h5>
+        </div>
+
+        <div data-role="footer">
+            <a href="#TOS" data-role="button" data-transition="flip" class="button2">Terms of Service</a>
+            <a href="#PP" data-role="button" data-transition="flip" class="button2">Privacy Policy</a>
+            <a href="#contact" data-role="button" data-transition="flip" class="button2">Contact Us</a>
+            <a href="#credits" data-role="button" data-transition="flip" class="button2">Credits</a>
+            <form class="form2" action="https://formspree.io/projecthealthdgs@gmail.com" method="POST">
+                <input name="name2" class="newsletter" placeholder="Full Name" type="text" required/>
+                <br/>
+                <input name="name2" class="newsletter" placeholder="Email" type="email" required/>
+                <button id="subscribe" type="submit">Subscribe to Newsletter</button>
+            </form>
+            <p id="c"> © 2019 Team Asclepius. All rights reserved. </p>
+        </div>
+    </div>
+
+
+            <div data-role="page" id="dataset">
+            <div data-role="header">
+                <div class="icon-bar">
+                <a href="#home"><i class="fa fa-home"></i></a>
+                <a href="#address"><i class="fa fa-address-book"></i></a>
+                <a href="#tips"><i class="fa fa-lightbulb-o"></i></a>
+                <a href="#info"><i class="fa fa-question-circle"></i></a>
+                </div>
+            </div>
+            <div role="main" class="ui-content">
+                <div id="mainform">
+                    <h2 class="green">Please fill out the following form to submit your medically diagnosed melanoma mole!</h2>
+                    <form id="form" action="https://formspree.io/projecthealthdgs@gmail.com" method="POST">
+                        <h3>Form</h3>       
+                        <hr/><br/>
+                        <label>Name: <span>*</span></label>
+                        <br/>
+                        <input id="name" name="name" placeholder="Your Name" type="text" required/><br/>
+                        <br/>
+                        <label>Email: <span>*</span></label>
+                        <br/>
+                        <input id="email" name="email" placeholder=" Your Email" type="email" required/><br/>
+                        <label>Link to image: <span>*</span></label>
+                        <br/>
+                        <input id="Image" type="text" placeholder="Link to image for testing" name="ImageLink" required/>
+                        <br/>
+                        <br/>
+                        <button type="submit" class="subscribe2">Submit</button>
+                        <br/>
+                    </form>
+                    <h4> Thank you for contributing to the Project Health dataset of melanoma images! </h4>
+                </div>
+            </div>
+            <div data-role="footer">
+                <a href="#TOS" data-role="button" data-transition="flip" class="button2">Terms of Service</a>
+                <a href="#PP" data-role="button" data-transition="flip" class="button2">Privacy Policy</a>
+                <a href="#contact" data-role="button" data-transition="flip" class="button2">Contact Us</a>                 
+                <a href="#credits" data-role="button" data-transition="flip" class="button2">Credits</a>
+                <form class="form2" action="https://formspree.io/projecthealthdgs@gmail.com" method="POST">
+                    <input name="name2" class="newsletter" placeholder="Full Name" type="text" required/>
+                    <br/>
+                    <input name="name2" class="newsletter" placeholder="Email" type="email" required/>
+                    <button id="subscribe" type="submit">Subscribe to Newsletter</button>
+                </form>
+                <p id="c"> © 2019 Team Asclepius. All rights reserved. </p>
+            </div>
+        </div>
+
+
+
+    <div data-role="page" id="info">
+        <div data-role="header">
+            <div class="icon-bar">
+                <a href="#home"><i class="fa fa-home"></i></a>
+                <a href="#address"><i class="fa fa-address-book"></i></a>
+                <a href="#tips"><i class="fa fa-lightbulb-o"></i></a>
+                <a class = "active" href="#info"><i class="fa fa-question-circle"></i></a>
+            </div>
+        </div>
+        <div role="main" class="ui-content">
+            <h1> <span style="color: #59B3C2;">About Melanoma</span></h1>
+            <hr/>
+            <p> <strong>Q?</strong> </p> 
+<br/>
+<p>A</p>
+<br/>
+            <p> <strong>Q?</strong> </p> 
+<br/>
+<p>A</p>
+<br/>
+<p><strong>Q?</strong></p>
+<br/>
+<p>A</p>
+<br/>
+<p><strong>Q?</strong></p>
+<br/>
+<p>A</p>
+<p><strong>Q?</strong></p>
+<br/>
+<p>A</p>
+</div>
+        <div data-role="footer">
+            <a href="#TOS" data-role="button" data-transition="flip" class="button2">Terms of Service</a>
+            <a href="#PP" data-role="button" data-transition="flip" class="button2">Privacy Policy</a>
+            <a href="#contact" data-role="button" data-transition="flip" class="button2">Contact Us</a>
+             
+            <a href="#credits" data-role="button" data-transition="flip" class="button2">Credits</a>
+            <form class="form2" action="https://formspree.io/projecthealthdgs@gmail.com" method="POST">
+                <input name="name2" class="newsletter" placeholder="Full Name" type="text" required/>
+                <br/>
+                <input name="name2" class="newsletter" placeholder="Email" type="email" required/>
+                <button id="subscribe" type="submit">Subscribe to Newsletter </button>
+            </form>
+            <p id="c"> © 2019 Team Asclepius. All rights reserved. </p>
+        </div>
+    </div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <div data-role="page" id="contact">
+        <div data-role="header">
+            <div class="icon-bar">
+                <a href="#home"><i class="fa fa-home"></i></a>
+                <a href="#address"><i class="fa fa-address-book"></i></a>
+                <a href="#tips"><i class="fa fa-lightbulb-o"></i></a>
+                <a href="#info"><i class="fa fa-question-circle"></i></a>
                 
             </div>
         </div>
         <div role="main" class="ui-content" align="center">
-            <strong><h2 id="p2" align="center">Prometheus</h2></strong>
+            <strong><h2 id="p2" align="center">Project Health</h2></strong>
             <form id="form" action="https://formspree.io/prometheuscnn@gmail.com" method="POST">
                 <h3>Contact Form</h3>
                 <hr/><br/>
@@ -133,7 +833,7 @@
                 <input name="name2" class="newsletter" placeholder="Email" type="email" required/>
                 <button id="subscribe" type="submit">Subscribe to Newsletter</button>
             </form>
-            <p id="c"> © 2018 Prometheus. All rights reserved. </p>
+            <p id="c"> © 2019 Team Asclepius. All rights reserved. </p>
         </div>
     </div>
     
@@ -144,13 +844,14 @@
         <div data-role="header">
             <div class="icon-bar">
                 <a href="#home"><i class="fa fa-home"></i></a>
+                <a href="#address"><i class="fa fa-address-book"></i></a>
+                <a href="#tips"><i class="fa fa-lightbulb-o"></i></a>
                 <a href="#info"><i class="fa fa-question-circle"></i></a>
-                <a href="#code"><i class="fa fa-code"></i></a>
                 
             </div>
         </div>
         <div role="main" class="ui-content" align="left">
-            <strong><h2 id="p2" align="left">Prometheus</h2></strong>
+            <strong><h2 id="p2" align="left">Project Health</h2></strong>
             <hr/>
             <h3><strong>Credits</strong></h3>
             <br/>
@@ -229,7 +930,7 @@
                 <input name="name2" class="newsletter" placeholder="Email" type="email" required/>
                 <button id="subscribe" type="submit">Subscribe to Newsletter </button>
             </form>
-            <p id="c"> © 2018 Prometheus. All rights reserved. </p>
+            <p id="c"> © 2019 Team Asclepius. All rights reserved. </p>
         </div>
     </div>
 
@@ -243,20 +944,20 @@
         <div data-role="header">
             <div class="icon-bar">
                 <a href="#home"><i class="fa fa-home"></i></a>
+                <a href="#address"><i class="fa fa-address-book"></i></a>
+                <a href="#tips"><i class="fa fa-lightbulb-o"></i></a>
                 <a href="#info"><i class="fa fa-question-circle"></i></a>
-                <a href="#code"><i class="fa fa-code"></i></a>
-                
             </div>
         </div>
         <div role="main" class="ui-content" align="center">
-            <strong><h2 id="p2" align="center">Prometheus</h2></strong>
+            <strong><h2 id="p2" align="center">Project Health</h2></strong>
             <hr/>
             <h3>
                 <bold>Terms of Service</bold>
             </h3>
             <h4>OVERVIEW</h4>
     <br/>
-    <p>This website is operated by Prometheus. Throughout the site, the terms “we”, “us” and “our” refer to Prometheus. Prometheus offers this website, including all information, tools and services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here.</p>
+    <p>This website is operated by Team Asclepius. Throughout the site, the terms “we”, “us” and “our” refer to Team Asclepius. Project Health offers this website, including all information, tools and services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here.</p>
     <br/>
     <p>By visiting our site, you engage in our “Service” and agree to be bound by the following terms and conditions (“Terms of Service”, “Terms”), including those additional terms and conditions and policies referenced herein and/or available by hyperlink. These Terms of Service apply  to all users of the site, including without limitation users who are browsers, vendors, customers, merchants, and/ or contributors of content.</p>
     <br/>
@@ -280,7 +981,7 @@
     <br/>
     <p>You understand that your content, may be transferred unencrypted and involve (a) transmissions over various networks; and (b) changes to conform and adapt to technical requirements of connecting networks or devices. Credit card information is always encrypted during transfer over networks.</p>
     <br/>
-    <p>You agree not to reproduce, duplicate, copy, sell, resell or exploit any portion of the Prometheus, use of the Prometheus, or access to the Service or any contact on the website through which the service is provided, without express written permission by us.</p>
+    <p>You agree not to reproduce, duplicate, copy, sell, resell or exploit any portion of the Project Health, use of the Project Health, or access to the Service or any contact on the website through which the service is provided, without express written permission by us.</p>
     <br/>
     <p>The headings used in this agreement are included for convenience only and will not limit or otherwise affect these Terms.</p>
     <br/>
@@ -332,7 +1033,7 @@
     <br/>
     <p>Your submission of personal information through the store is governed by our Privacy Policy. To view our Privacy Policy.</p>
     <br/>
-    <p>By continuing to use services provided by the Prometheus, you consent to us proccessing personally identifiable information, including but not limited to email addresses, through third-party platforms such as "Formspree". Your information will not be used by such third parties in any way, except to perform the functionality of services offered by the Prometheus.</p>
+    <p>By continuing to use services provided by the Project Health, you consent to us proccessing personally identifiable information, including but not limited to email addresses, through third-party platforms such as "Formspree". Your information will not be used by such third parties in any way, except to perform the functionality of services offered by the Team Asclepius.</p>
     <br/>
     <br/>
                 <p>SECTION 9 - ERRORS, INACCURACIES AND OMISSIONS</p>
@@ -358,13 +1059,13 @@
     <br/>
     <p>You expressly agree that your use of, or inability to use, the service is at your sole risk. The service and all products and services delivered to you through the service are (except as expressly stated by us) provided 'as is' and 'as available' for your use, without any representation, warranties or conditions of any kind, either express or implied, including all implied warranties or conditions of merchantability, merchantable quality, fitness for a particular purpose, durability, title, and non-infringement.</p>
     <br/>
-    <p>In no case shall Prometheus, affiliates, suppliers, service providers or licensors be liable for any injury, loss, claim, or any direct, indirect, incidental, punitive, special, or consequential damages of any kind, including, without limitation lost profits, loss of data, or any similar damages, whether based in contract, tort (including negligence), strict liability or otherwise, arising from your use of any of the service or any products procured using the service, or for any other claim related in any way to your use of the service or any product, including, but not limited to, any errors or omissions in any content, or any loss or damage of any kind incurred as a result of the use of the service or any content (or product) posted, transmitted, or otherwise made available via the service, even if advised of their possibility. Because some states or jurisdictions do not allow the exclusion or the limitation of liability for consequential or incidental damages, in such states or jurisdictions, our liability shall be limited to the maximum extent permitted by law.</p>
+    <p>In no case shall Project Health, affiliates, suppliers, service providers or licensors be liable for any injury, loss, claim, or any direct, indirect, incidental, punitive, special, or consequential damages of any kind, including, without limitation lost profits, loss of data, or any similar damages, whether based in contract, tort (including negligence), strict liability or otherwise, arising from your use of any of the service or any products procured using the service, or for any other claim related in any way to your use of the service or any product, including, but not limited to, any errors or omissions in any content, or any loss or damage of any kind incurred as a result of the use of the service or any content (or product) posted, transmitted, or otherwise made available via the service, even if advised of their possibility. Because some states or jurisdictions do not allow the exclusion or the limitation of liability for consequential or incidental damages, in such states or jurisdictions, our liability shall be limited to the maximum extent permitted by law.</p>
     <br/>
     <br/>
     <br/>
                 <p>SECTION 12 - INDEMNIFICATION</p>
     <br/>
-    <p>You agree to indemnify, defend and hold harmless Prometheus and our parent, subsidiaries, affiliates, partners, officers, directors, agents, contractors, licensors, service providers, subcontractors, suppliers, interns and employees, harmless from any claim or demand, including reasonable attorneys’ fees, made by any third-party due to or arising out of your breach of these Terms of Service or the documents they incorporate by reference, or your violation of any law or the rights of a third-party.</p>
+    <p>You agree to indemnify, defend and hold harmless Project Health and our parent, subsidiaries, affiliates, partners, officers, directors, agents, contractors, licensors, service providers, subcontractors, suppliers, interns and employees, harmless from any claim or demand, including reasonable attorneys’ fees, made by any third-party due to or arising out of your breach of these Terms of Service or the documents they incorporate by reference, or your violation of any law or the rights of a third-party.</p>
     <br/>
     <br/>
                 <p>SECTION 13 - SEVERABILITY</p>
@@ -418,7 +1119,7 @@
                 <input name="name2" class="newsletter" placeholder="Email" type="email" required/>
                 <button id="subscribe" type="submit">Subscribe to Newsletter</button>
             </form>
-            <p id="c"> © 2018 Prometheus. All rights reserved. </p>
+            <p id="c"> © 2019 Team Asclepius. All rights reserved. </p>
         </div>
     </div>
 
@@ -429,13 +1130,14 @@
         <div data-role="header">
             <div class="icon-bar">
                 <a href="#home"><i class="fa fa-home"></i></a>
+                <a href="#address"><i class="fa fa-address-book"></i></a>
+                <a href="#tips"><i class="fa fa-lightbulb-o"></i></a>
                 <a href="#info"><i class="fa fa-question-circle"></i></a>
-                <a href="#code"><i class="fa fa-code"></i></a>
                 
             </div>
         </div>
         <div role="main" class="ui-content" align="left">
-            <strong><h2 id="p2" align="left">Prometheus</h2></strong>
+            <strong><h2 id="p2" align="left">Project Health</h2></strong>
             <hr/>
             <h3>
                 <strong>Privacy Policy</strong>
@@ -485,7 +1187,7 @@
 
                 <strong>Third-party disclosure </strong>
 <br/>
-<p>By continuing to use services provided by the Prometheus, you consent to us proccessing personally identifiable information, including but not limited to email addresses, through third-party platforms such as "Formspree". Your information will not be used by such third parties in any way, except to perform the functionality of services offered by the Prometheus.</p> 
+<p>By continuing to use services provided by the Project Health, you consent to us proccessing personally identifiable information, including but not limited to email addresses, through third-party platforms such as "Formspree". Your information will not be used by such third parties in any way, except to perform the functionality of services offered by the Team Asclepius.</p> 
 <br/>
     <strong>Google </strong>
 <br/>
@@ -534,7 +1236,7 @@
 <a href="mailto:prometheuscnn@gmail.com">
 prometheuscnn@gmail.com</a>
 <br/>
-                <p> Last Edited on 2018-04-25 </p>
+                <p> Last Edited on 2019-04-25 </p> <!-- JEFFREY -->
         </div>
         <div data-role="footer">
             <a href="#TOS" data-role="button" data-transition="flip" class="button2">Terms of Service</a>
@@ -548,342 +1250,7 @@ prometheuscnn@gmail.com</a>
                 <input name="name2" class="newsletter" placeholder="Email" type="email" required/>
                 <button id="subscribe" type="submit">Subscribe to Newsletter</button>
             </form>
-            <p id="c"> © 2018 Prometheus. All rights reserved. </p>
+            <p id="c"> © 2019 Team Asclepius. All rights reserved. </p>
         </div>
     </div>
-
-
-
-    <div data-role="page" id="code">
-        <div data-role="header">
-            <div class="icon-bar">
-                <a href="#home"><i class="fa fa-home"></i></a>
-                <a href="#info"><i class="fa fa-question-circle"></i></a>
-                <a class = "active" href="#code"><i class="fa fa-code"></i></a>
-                
-            </div>
-        </div>
-        <div role="main" class="ui-content">
-            <h1> <span style="color: #59B3C2;">About Prometheus</span></h1>
-            <hr/>
-            <p> <strong>What is a convolutional neural network?</strong> </p> 
-<br/>
-<p>A class of deep, feed-forward artificial neural networks. Different from over neural networks, the convolutional neural network (CNN) employs the convolutional function in the convolution layer, along with pooling and fully connected layers. Taking inspiration from biological processes of the animal visual cortex, the CNN is a type of neural network proven to be very successful in image recognition tasks.</p>
-<br/>
-            <p> <strong>What do I input to the convolutional neural network</strong> </p> 
-<br/>
-<p>Prometheus takes jpeg images as input from users. We then turn the image into a 3D numpy array, resize and normalize the data, and then save the jpeg file to an hdf5 file "testing_data".</p>
-<br/>
-<p><strong>What is the output of the convolutional neural network?</strong></p>
-<br/>
-<p>The convolutional neural network calculates and outputs in the probability (denoted by y-hat) of the inputted mole image being malignant melanoma.</p>
-<br/>
-<p><strong>How accurate is the convolutional neural network's calculation?</strong></p>
-<br/>
-<p>Due to time constraints, we have not been able to perfect our convolutional neural network model. However, our convolutional neural network has been estimated to perform medical diagnosis with above 70% accuracy, which rivals that of professional diagnosticians.</p>
-<p><strong>How can I get involved in this project?</strong></p>
-<br/>
-<p>Developers, melanoma ptients, and users alike are all welcome to contribute to the Prometheus project. Interested developers may refer to the Github repository (https://github.com/chinglamchoi/Prometheus), where all convolutional neural network and Prometheus app protoype files are available open source. Melanoma ptients can contribute to the cause by submitting images of medically diagnosed melanoma moles, which can effectively enhance our melanoma dataset. Users can contribute by submitting mole images via the "Detect Melanoma" button, which helps Prometheus developers better assess the accuracy of our CNN.</p>
-</div>
-        <div data-role="footer">
-            <a href="#TOS" data-role="button" data-transition="flip" class="button2">Terms of Service</a>
-            <a href="#PP" data-role="button" data-transition="flip" class="button2">Privacy Policy</a>
-            <a href="#contact" data-role="button" data-transition="flip" class="button2">Contact Us</a>
-             
-            <a href="#credits" data-role="button" data-transition="flip" class="button2">Credits</a>
-            <form class="form2" action="https://formspree.io/prometheuscnn@gmail.com" method="POST">
-                <input name="name2" class="newsletter" placeholder="Full Name" type="text" required/>
-                <br/>
-                <input name="name2" class="newsletter" placeholder="Email" type="email" required/>
-                <button id="subscribe" type="submit">Subscribe to Newsletter </button>
-            </form>
-            <p id="c"> © 2018 Prometheus. All rights reserved. </p>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="LearnMore">
-        <div data-role="header">
-            <div class="icon-bar">
-                <a href="#home"><i class="fa fa-home"></i></a>
-                <a href="#info"><i class="fa fa-question-circle"></i></a>
-                <a href="#code"><i class="fa fa-code"></i></a>
-                
-            </div>
-        </div>
-        <div role="main" class="ui-content">
-            <h1> <span style="color: #59B3C2;">Prometheus</span></h1>
-            <hr/>
-            <p> <strong>The Prometheus Team</strong> </p> 
-<br/>
-<p>Our team comprises 4 Form 3 students from the Diocesan Girls' School, Hong Kong. We are Choi Ching Lam, Miko Leung, Anna Chiu, and Olga Kwan. </p>
-<br/>
-<p> <strong>Choi Ching Lam</strong> </p> 
-<br/>
-<ul>
-<li>Prometheus' idea creator and developer for the convolutional neural network and Prometheus application.</li>
-<li>Is passionate about artificial intelligence, aspires to be a college Computer Science major at MIT, and go into academia.</li>
-<li>Github: https://github.com/chinglamchoi</li>
-</ul>
-<br/>
-<p> <strong>Miko Leung</strong> </p> 
-<br/>
-<ul>
-<li>Prometheus' video editor and designer.</li>
-<li>Math enthusiast who is forever preoccupied with maths. Aspires to be a doctor who saves lives.</li>
-<li>Github: https://github.com/gflareon</li>
-</ul>
-<br/>
-<p> <strong>Anna Chiu</strong> </p> 
-<br/>
-<ul>
-<li>Prometheus' business plan writer.</li>
-<li>Enjoys biology and chemistry. </li>
-<li>Aspires to become a medical doctor.</li>
-</ul>
-<br/>
-<p> <strong>Olga Kwan</strong> </p> 
-<br/>
-<ul>
-<li>Prometheus' editor.</li>
-<li>Passionate about literature and public speaking.</li>
-<li>Humanitarian who ejoys speaking up for those who aren't heard.</li>
-</ul>
-        </div>
-        <div data-role="footer">
-            <a href="#TOS" data-role="button" data-transition="flip" class="button2">Terms of Service</a>
-            <a href="#PP" data-role="button" data-transition="flip" class="button2">Privacy Policy</a>
-            <a href="#contact" data-role="button" data-transition="flip" class="button2">Contact Us</a> 
-            <a href="#credits" data-role="button" data-transition="flip" class="button2">Credits</a>
-            <form class="form2" action="https://formspree.io/prometheuscnn@gmail.com" method="POST">
-                <input name="name2" class="newsletter" placeholder="Full Name" type="text" required/>
-                <br/>
-                <input name="name2" class="newsletter" placeholder="Email" type="email" required/>
-                <button id="subscribe" type="submit">Subscribe to Newsletter </button>
-            </form>
-            <p id="c"> © 2018 Prometheus. All rights reserved. </p>
-        </div>
-    </div>
-
-
-
-
-
-    <div data-role="page" id="Leftovers">
-        <div data-role="header">
-            <div class="icon-bar">
-                <a href="#home"><i class="fa fa-home"></i></a>
-                <a href="#info"><i class="fa fa-question-circle"></i></a>
-                <a href="#code"><i class="fa fa-code"></i></a>
-                
-            </div>
-        </div>
-        <div role="main" class="ui-content" align="center">
-            <strong><h2>Leftovers: Food Collection Points</h2></strong>
-            <iframe src="https://www.google.com/maps/d/embed?mid=1TBMQqXJKrRoSIFT5mZiKwSPxIQo&z=10&ll=22.320152, 114.188445" width="540" height="480" id="mappp"></iframe>
-            <br/>
-<p> Housing estates or hotels that collaborate with us, donating their excess foods for recycling via our weekly truck services. </p>
-            <p> Disclaimer: The above bookmarked places are used solely for functionality demonstration purposes for the Food Collection Web App prototype. </p>
-              <a href="#code" data-role="button" data-transition="flip" class="button3">Back</a>
-
-        </div>
-        <div data-role="footer">
-            <a href="#TOS" data-role="button" data-transition="flip" class="button2">Terms of Service</a>
-            <a href="#PP" data-role="button" data-transition="flip" class="button2">Privacy Policy</a>
-            <a href="#contact" data-role="button" data-transition="flip" class="button2">Contact Us</a>
-             
-            <a href="#credits" data-role="button" data-transition="flip" class="button2">Credits</a>
-            <form class="form2" action="https://formspree.io/prometheuscnn@gmail.com" method="POST">
-                <input name="name2" class="newsletter" placeholder="Full Name" type="text" required/>
-                <br/>
-                <input name="name2" class="newsletter" placeholder="Email" type="email" required/>
-                <button id="subscribe" type="submit">Subscribe to Newsletter</button>
-            </form>
-            <p id="c"> © 2018 Prometheus. All rights reserved. </p>
-        </div>
-    </div>
-
-
-
-
-        <div data-role="page" id="detect">
-            <div data-role="header">
-                <div class="icon-bar">
-                    <a href="#home"><i class="fa fa-home"></i></a>
-                    <a href="#info"><i class="fa fa-question-circle"></i></a>
-                    <a href="#code"><i class="fa fa-code"></i></a>
-                </div>
-            </div>
-            <div role="main" class="ui-content">
-                <div id="mainform">
-                    <h2 class="green">Please fill out the following form to submit your mole jpeg image for testing!</h2>
-                    <form id="form" action="https://formspree.io/prometheuscnn@gmail.com" method="POST">
-                        <h3>Form</h3>
-                        <h4>(Due to time constraints, our group was unable to find support to embed our python convolutional neural network for the Prometheus prototype. Thus, we ask users to share email addresses and images through forms. Upon receiving the data, we run the image through our CNN, output a probability, and share the testing results and treatment suggestions to the user's provided email address within the same day.)</h4>   
-                        <h4>In the future, we hope to change the CNN into one that directly trains on the users' web browser. This method would yield near instantaneous results, futher reducing diagnosis time.</h4>         
-
-                        <hr/><br/>
-                        <label>Name: <span>*</span></label>
-                        <br/>
-                        <input id="name" name="name" placeholder="Your Name" type="text" required/><br/>
-                        <br/>
-                        <label>Email: <span>*</span></label>
-                        <br/>
-                        <input id="email" name="email" placeholder=" Your Email" type="email" required/><br/>
-                        <label>Link to image: <span>*</span></label>
-                        <br/>
-                        <input id="Image" type="text" placeholder="Link to image for testing" name="ImageLink" required/>
-                        <br/>
-                        <textarea id="message" name="message" placeholder="Message......." required></textarea><br/>
-                        <br/>
-                        <button type="submit" class="subscribe2">Submit</button>
-                        <br/>
-                    </form>
-                </div>
-            </div>
-            <div data-role="footer">
-                <a href="#TOS" data-role="button" data-transition="flip" class="button2">Terms of Service</a>
-                <a href="#PP" data-role="button" data-transition="flip" class="button2">Privacy Policy</a>
-                <a href="#contact" data-role="button" data-transition="flip" class="button2">Contact Us</a>                 
-                <a href="#credits" data-role="button" data-transition="flip" class="button2">Credits</a>
-                <form class="form2" action="https://formspree.io/prometheuscnn@gmail.com" method="POST">
-                    <input name="name2" class="newsletter" placeholder="Full Name" type="text" required/>
-                    <br/>
-                    <input name="name2" class="newsletter" placeholder="Email" type="email" required/>
-                    <button id="subscribe" type="submit">Subscribe to Newsletter</button>
-                </form>
-                <p id="c"> © 2018 Prometheus. All rights reserved. </p>
-            </div>
-        </div>
-
-   <div data-role="page" id="cure">
-        <div data-role="header">
-            <div class="icon-bar">
-                    <a href="#home"><i class="fa fa-home"></i></a>
-                    <a href="#info"><i class="fa fa-question-circle"></i></a>
-                    <a href="#code"><i class="fa fa-code"></i></a>
-                    
-                </div>
-        </div>
-
-        <div role="main" class="ui-content">
-                <h2 align="center">Has your melanoma mole been medically diagnosed?</h2>    
-            <h5><a href="#dataset" data-role="button" data-transition="flip" class="button1">Yes</a></h5>
-            <h5><a href="#home" data-role="button" data-transition="flip" class="button1">No</a></h5>
-        </div>
-
-        <div data-role="footer">
-            <a href="#TOS" data-role="button" data-transition="flip" class="button2">Terms of Service</a>
-            <a href="#PP" data-role="button" data-transition="flip" class="button2">Privacy Policy</a>
-            <a href="#contact" data-role="button" data-transition="flip" class="button2">Contact Us</a>
-            <a href="#credits" data-role="button" data-transition="flip" class="button2">Credits</a>
-            <form class="form2" action="https://formspree.io/prometheuscnn@gmail.com" method="POST">
-                <input name="name2" class="newsletter" placeholder="Full Name" type="text" required/>
-                <br/>
-                <input name="name2" class="newsletter" placeholder="Email" type="email" required/>
-                <button id="subscribe" type="submit">Subscribe to Newsletter</button>
-            </form>
-            <p id="c"> © 2018 Prometheus. All rights reserved. </p>
-        </div>
-    </div>
-
-
-            <div data-role="page" id="dataset">
-            <div data-role="header">
-                <div class="icon-bar">
-                    <a href="#home"><i class="fa fa-home"></i></a>
-                    <a href="#info"><i class="fa fa-question-circle"></i></a>
-                    <a href="#code"><i class="fa fa-code"></i></a>
-                </div>
-            </div>
-            <div role="main" class="ui-content">
-                <div id="mainform">
-                    <h2 class="green">Please fill out the following form to submit your medically diagnosed melanoma mole!</h2>
-                    <form id="form" action="https://formspree.io/prometheuscnn@gmail.com" method="POST">
-                        <h3>Form</h3>       
-                        <hr/><br/>
-                        <label>Name: <span>*</span></label>
-                        <br/>
-                        <input id="name" name="name" placeholder="Your Name" type="text" required/><br/>
-                        <br/>
-                        <label>Email: <span>*</span></label>
-                        <br/>
-                        <input id="email" name="email" placeholder=" Your Email" type="email" required/><br/>
-                        <label>Link to image: <span>*</span></label>
-                        <br/>
-                        <input id="Image" type="text" placeholder="Link to image for testing" name="ImageLink" required/>
-                        <br/>
-                        <br/>
-                        <button type="submit" class="subscribe2">Submit</button>
-                        <br/>
-                    </form>
-                    <h4> Thank you for contributing to the Prometheus dataset of melanoma images! </h4>
-                </div>
-            </div>
-            <div data-role="footer">
-                <a href="#TOS" data-role="button" data-transition="flip" class="button2">Terms of Service</a>
-                <a href="#PP" data-role="button" data-transition="flip" class="button2">Privacy Policy</a>
-                <a href="#contact" data-role="button" data-transition="flip" class="button2">Contact Us</a>                 
-                <a href="#credits" data-role="button" data-transition="flip" class="button2">Credits</a>
-                <form class="form2" action="https://formspree.io/prometheuscnn@gmail.com" method="POST">
-                    <input name="name2" class="newsletter" placeholder="Full Name" type="text" required/>
-                    <br/>
-                    <input name="name2" class="newsletter" placeholder="Email" type="email" required/>
-                    <button id="subscribe" type="submit">Subscribe to Newsletter</button>
-                </form>
-                <p id="c"> © 2018 Prometheus. All rights reserved. </p>
-            </div>
-        </div>
-
-
-
-    <div data-role="page" id="info">
-        <div data-role="header">
-            <div class="icon-bar">
-                <a href="#home"><i class="fa fa-home"></i></a>
-                <a class = "active" href="#info"><i class="fa fa-question-circle"></i></a>
-                <a href="#code"><i class="fa fa-code"></i></a>
-                
-            </div>
-        </div>
-        <div role="main" class="ui-content">
-            <h1> <span style="color: #59B3C2;">About Melanoma</span></h1>
-            <hr/>
-            <p> <strong>What is Melanoma?</strong> </p> 
-<br/>
-<p>A type of skin cacer that develops from pigment-containing cells known as melanocytes. Melanoma typically occurs in the skin, but is sometimes found in the mouth, intestines, or eye.</p>
-<br/>
-            <p> <strong>What causes Melanoma?</strong> </p> 
-<br/>
-<p>Melanomas are usually caused by DNA damage as a result of exposure to solar UV light, or other UV radiation sources usch as tanning devices. Genetics, strength of immune system, number of moles one already has are all factors of one's risk of being diagnosed for melanoma.</p>
-<br/>
-<p><strong>What are some symptoms of Melanoma?</strong></p>
-<br/>
-<p>Melanoma symptoms are often abbreviated to "ABCDE". "A" refers to asymmetry in moles, "B" referring to irregular moles borders, "C" referring to uneven mole colour distribution, "D" referring to moles with diameters of above 6 mm, and "E" referring to how the mole evolves with time.</p>
-<br/>
-<p><strong>How can I prevent contracting Melanoma?</strong></p>
-<br/>
-<p>As genetics and local climate both play a role in causing melanoma, it is impossible to guarantee being free of melanoma. However, one can lower their risks of contracting through exercising habits such as wearing sunscreen, protective clothing against intense solar UV light, avoiding excessive tanning. It is also crucial to recognise the significance of regular check ups, especially when suspicious looking moles that satisy the melanoma "ABCDE" rule form. </p>
-<p><strong>I have melanoma, what do I do?</strong></p>
-<br/>
-<p>Unlike particular forms of cancer, melanoma skin cancer has a decent 5 yer survival rate, especially when detected at very early stages. If  diagnosed with melanoma, you should cooperate with your doctor in eradicating the risk of melanoma metastasizing through tissue, the lymph system and the blood. Depending on the stage of the melanoma found, treatment methods differ from surgery (for stages 0 till 3), to clinical trials (stages 1 till 3), to chemotherapy (stage 4). In terms of post-diagnosis treatment, good communication and cooperation with your doctor is key to making a full recovery. In case you would like to verify your medical diagnosis of melanoma, you may gain a second opinion via the "Detect melanoma" button on the Prometheus app.</p>
-</div>
-        <div data-role="footer">
-            <a href="#TOS" data-role="button" data-transition="flip" class="button2">Terms of Service</a>
-            <a href="#PP" data-role="button" data-transition="flip" class="button2">Privacy Policy</a>
-            <a href="#contact" data-role="button" data-transition="flip" class="button2">Contact Us</a>
-             
-            <a href="#credits" data-role="button" data-transition="flip" class="button2">Credits</a>
-            <form class="form2" action="https://formspree.io/prometheuscnn@gmail.com" method="POST">
-                <input name="name2" class="newsletter" placeholder="Full Name" type="text" required/>
-                <br/>
-                <input name="name2" class="newsletter" placeholder="Email" type="email" required/>
-                <button id="subscribe" type="submit">Subscribe to Newsletter </button>
-            </form>
-            <p id="c"> © 2018 Prometheus. All rights reserved. </p>
-        </div>
-    </div>
-</body>
-
 </html>
