@@ -86,6 +86,57 @@
         width: 7px;
       }
 
+
+
+
+      .bye {
+        margin: 0;
+        padding: 0;
+      }
+
+      .bye {
+        cursor: pointer;
+        position: relative;
+        padding: 12px 8px 12px 40px;
+        list-style-type: none;
+        background: #eee;
+        font-size: 25px;
+        transition: 0.2s;
+        
+        /* make the list items unselectable */
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      .bye:nth-child(odd) {
+        background: #f9f9f9;
+      }
+
+      .bye:hover {
+        background: #ddd;
+      }
+
+      .bye.checked {
+        background: #888;
+        color: #fff;
+        text-decoration: line-through;
+      }
+
+      .bye.checked::before {
+        content: '';
+        position: absolute;
+        border-color: #fff;
+        border-style: solid;
+        border-width: 0 2px 2px 0;
+        top: 10px;
+        left: 16px;
+        transform: rotate(45deg);
+        height: 15px;
+        width: 7px;
+      }
+
       .close {
         position: absolute;
         right: 0;
@@ -172,6 +223,22 @@
             background-clip: padding-box !important;
             position: relative !important;
             background-color: #59B3C2 !important;
+            color: white!important;
+            font-family: 'Quicksand', sans-serif !important;
+          height: 35px !important;
+          text-align: center !important;
+          font-size: 22px !important;
+        }
+        .button1729 {
+            margin: 2em auto !important;
+            display: block !important;
+            border: 6px solid rgba(255, 255, 255, 0.45) !important;
+            border-radius: 50px !important;
+            padding: 0.5em 2em !important;
+            background-repeat: no-repeat !important;
+            background-size: 40% !important;
+            background-clip: padding-box !important;
+            position: relative !important;
             color: white!important;
             font-family: 'Quicksand', sans-serif !important;
           height: 35px !important;
@@ -423,6 +490,10 @@
         #shut {
             background-color: #B22222 !important;
             border-color: #B22222 !important;
+        }
+        #shut2 {
+            background-color: #004890 !important;
+            border-color: #004890 !important;
         }
     </style>
 </head>
@@ -681,15 +752,15 @@
               <span onclick="newElement()" class="addBtn">Add</span>
             </div>
           </div>
-          <ul id="myUL" class = "hi">
-            <li class = "hi">1. Daughter: Madeline Law      <a href="tel:60733637" class="button1 ui-link" id="shut"><i class="fa fa-phone"></i>6073 3637</a></li>
-            <li class = "hi">2. Son: James Law      <a href="tel:60733637" class="button1 ui-link" id="shut"><i class="fa fa-phone"></i>6073 3637</a></li>
-            <li class = "hi">3. Care Giver: Mrs Anne      <a href="tel:60733637" class="button1 ui-link" id="shut"><i class="fa fa-phone"></i>6073 3637</a></li>
-            <li class = "hi">4. Friend: Evelyn Wang      <a href="tel:60733637" class="button1 ui-link" id="shut"><i class="fa fa-phone"></i>6073 3637</a></li>
-            <li class = "hi">5. Friend: Chen Gang      <a href="tel:60733637" class="button1 ui-link" id="shut"><i class="fa fa-phone"></i>6073 3637</a></li>
-            <li class = "hi">6. Friend: Neville Logan      <a href="tel:60733637" class="button1 ui-link" id="shut"><i class="fa fa-phone"></i>6073 3637</a></li>
-            <li class="hi">7. Colleague: Nick Fang      <a href="tel:60733637" class="button1 ui-link" id="shut"><i class="fa fa-phone"></i>6073 3637</a></li>
-            <li class="hi">8. Colleague: David Wallace      <a href="tel:60733637" class="button1 ui-link" id="shut"><i class="fa fa-phone"></i>6073 3637</a></li>
+          <ul id="myUL" class = "bye"> 
+            <li class = "bye">1. Daughter: Madeline Law<a href="tel:60733637" class="button1729" id="shut2"><i class="fa fa-phone"></i>6073 3637</a></li>
+            <li class = "bye">2. Son: James Law<a href="tel:60733637" class="button11729" id="shut2"><i class="fa fa-phone"></i>6073 3637</a></li><!-- JEFFREY -->
+            <li class = "bye">3. Care Giver: Mrs Anne<a href="tel:60733637" class="button1729" id="shut2"><i class="fa fa-phone"></i>6073 3637</a></li><!-- JEFFREY -->
+            <li class = "bye">4. Friend: Evelyn Wang<a href="tel:60733637" class="button1729" id="shut2"><i class="fa fa-phone"></i>6073 3637</a></li><!-- JEFFREY -->
+            <li class = "bye">5. Friend: Chen Gang<a href="tel:60733637" class="button1729" id="shut2"><i class="fa fa-phone"></i>6073 3637</a></li><!-- JEFFREY -->
+            <li class = "bye">6. Friend: Neville Logan<a href="tel:60733637" class="button1729" id="shut2"><i class="fa fa-phone"></i>6073 3637</a></li><!-- JEFFREY -->
+            <li class="bye">7. Colleague: Nick Fang<a href="tel:60733637" class="button1729" id="shut2"><i class="fa fa-phone"></i>6073 3637</a></li><!-- JEFFREY -->
+            <li class="bye">8. Colleague: David Wallace<a href="tel:60733637" class="button1729" id="shut2"><i class="fa fa-phone"></i>6073 3637</a></li><!-- JEFFREY -->
           </ul>
         </div>
         <script>
