@@ -570,6 +570,9 @@
               width: 100%;
             }
           }
+          #fancyyy {
+            background-image: linear-gradient(#227fa3, #977FFA);
+          }
 
     </style>
 </head>
@@ -854,7 +857,7 @@
             <h1 style="margin:5px">My Contacts</h1>
             <div class="sizingg">
               <input type="text" id="myInput" placeholder="Enter Name..">
-              <span onclick="newElement()" class="addBtn">Add</span>
+              <span onclick="newElement1()" class="addBtn">Add</span>
             </div>
           </div>
           <br>
@@ -901,7 +904,7 @@
       }, false);
 
       // Create a new list item when clicking on the "Add" button
-      function newElement() {
+      function newElement1() {
         var li = document.createElement("li");
         var inputValue = document.getElementById("myInput").value;
         var t = document.createTextNode(inputValue);
@@ -994,6 +997,68 @@
             <li>Passionate about Computer Science and programming.</li>
             <li>Aspires to attend MIT as a CS major.</li>
             </ul>
+        </div>
+        <div data-role="footer">
+            <a href="#TOS" data-role="button" data-transition="flip" class="button2">Terms of Service</a>
+            <a href="#PP" data-role="button" data-transition="flip" class="button2">Privacy Policy</a>
+            <a href="#contact" data-role="button" data-transition="flip" class="button2">Contact Us</a> 
+            <a href="#credits" data-role="button" data-transition="flip" class="button2">Credits</a>
+            <form class="form2" action="https://formspree.io/projecthealthdgs@gmail.com" method="POST">
+                <input name="name2" class="newsletter" placeholder="Full Name" type="text" required/>
+                <br/>
+                <input name="name2" class="newsletter" placeholder="Email" type="email" required/>
+                <button id="subscribe" type="submit">Subscribe for Healthy Living Tips </button>
+            </form>
+            <p id="c"> © 2019 Team Asclepius. All rights reserved. </p>
+        </div>
+    </div>
+
+
+
+<div data-role="page" id="tips">
+    <div data-role="header">
+        <div class="icon-bar">
+            <a href="#home"><i class="fa fa-home"></i></a>
+            <a href="#address"><i class="fa fa-address-book"></i></a>
+            <a href="#tips"><i class="fa fa-lightbulb-o"></i></a>
+            <a class = "active" href="#info"><i class="fa fa-question-circle"></i></a>
+        </div>
+    </div>
+    <div role="main" class="ui-content">
+        <h1> <span style="color: #59B3C2;">Project Health</span></h1>
+        <hr/>
+        <br/>
+        <h3><p id="textfancy"></p></h3>
+        <br>
+        <p id="textfancy1"></p>
+        <p id="textfancy2"></p>
+        <p id="textfancy3"></p>
+        <button id="fancyyy" onclick="myFunction12345()" align="center">Get Healthy Living Tips</button>
+
+
+        <script>
+            function myFunction12345() {
+              var button = document.getElementById("fancyyy");
+              var onee = document.getElementById("textfancy");
+              var twoo = document.getElementById("textfancy1");
+              var threee = document.getElementById("textfancy2");
+              var fourr = document.getElementById("textfancy3");
+
+              var first = ["Drink more water!", "Eat healthier!", "Stay physically active!", "Focus on prevention!", "Play a board game with family!", "Mindfulness."];
+              
+              var second = ["Dehydration can take a toll on your energy levels.", "Eat more whole grains.", "Try to do an hour of exercise every day.", "Avoid things that increase risk of dangerous diseases, such as smoking or alcohol.", "This can give everyone a chance to socialise and can keep senior’s minds sharp.", "Pay attention to your body and its needs."];
+              
+              var third = ["", "Stay away from saturated fat.", "Even walking around a park can be beneficial", "", "", "Visit the doctor often to check up and make sure one’s body is healthy"];
+              
+              var fourth = ["", "", "Even better to do it with others. Socialising can further benefit mental health.", "", "", ""]
+              
+              var numm = Math.floor(Math.random() * Math.floor(6)
+              onee.innerHTML = first[num];
+              twoo.innerHTML = second[num];
+              threee.innerHTML = third[num];
+              fourr.innerHTML = fourth[num];
+          }
+        </script>
         </div>
         <div data-role="footer">
             <a href="#TOS" data-role="button" data-transition="flip" class="button2">Terms of Service</a>
