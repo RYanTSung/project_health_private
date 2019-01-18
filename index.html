@@ -286,7 +286,7 @@
             /* Float links side by side */
             text-align: center !important;
             /* Center-align text */
-            width: 25%;
+            width: 33.333333%;
             /* Equal width (5 icons with 20% width each = 100%)
             padding: 12px 0; /* Some top and bottom padding */
             transition: all 0.3s ease;
@@ -570,12 +570,6 @@
               width: 100%;
             }
           }
-          #fancyyy {
-            background-image: linear-gradient(#227fa3, #977FFA);
-            size: 30%;
-            height: 25px;
-          }
-
     </style>
 </head>
 
@@ -588,9 +582,7 @@
             <div class="icon-bar">
                 <a class="active" href="#home"><i class="fa fa-home"></i></a>
                 <a href="#address"><i class="fa fa-address-book"></i></a>
-                <a href="#tips"><i class="fa fa-lightbulb-o"></i></a>
                 <a href="#info"><i class="fa fa-question-circle"></i></a>
-                
             </div>
         </div>
         <div role="main" class="ui-content" align="center">
@@ -683,7 +675,6 @@
         <div class="icon-bar">
         <a href="#home"><i class="fa fa-home"></i></a>
         <a href="#address"><i class="fa fa-address-book"></i></a>
-        <a href="#tips"><i class="fa fa-lightbulb-o"></i></a>
         <a href="#info"><i class="fa fa-question-circle"></i></a>
         </div>
     </div>
@@ -849,7 +840,6 @@
     <div class="icon-bar">
       <a href="#home"><i class="fa fa-home"></i></a>
       <a class="active" href="#address"><i class="fa fa-address-book"></i></a>
-      <a href="#tips"><i class="fa fa-lightbulb-o"></i></a>
       <a href="#info"><i class="fa fa-question-circle"></i></a>
     </div>
   </div>
@@ -957,7 +947,6 @@
             <div class="icon-bar">
                 <a href="#home"><i class="fa fa-home"></i></a>
                 <a href="#address"><i class="fa fa-address-book"></i></a>
-                <a href="#tips"><i class="fa fa-lightbulb-o"></i></a>
                 <a href="#info"><i class="fa fa-question-circle"></i></a>
             </div>
         </div>
@@ -1016,75 +1005,11 @@
     </div>
 
 
-
-<div data-role="page" id="tips">
-    <div data-role="header">
-        <div class="icon-bar">
-            <a href="#home"><i class="fa fa-home"></i></a>
-            <a href="#address"><i class="fa fa-address-book"></i></a>
-            <a href="#tips"><i class="fa fa-lightbulb-o"></i></a>
-            <a class = "active" href="#info"><i class="fa fa-question-circle"></i></a>
-        </div>
-    </div>
-    <div role="main" class="ui-content">
-        <h1> <span style="color: #59B3C2;">Project Health</span></h1>
-        <hr/>
-        <br/>
-        <h3><p id="textfancy">Drink more water!</p></h3>
-        <br>
-        <p id="textfancy1">Dehydration can take a toll on your energy levels.</p>
-        <p id="textfancy2"></p>
-        <p id="textfancy3"></p>
-        <button id="fancyyy" onclick="myFunction12345()" align="center"><span style="color: #ffffff;">Get Healthy Living Tips</span></button>
-
-
-        <script>
-            function myFunction12345() {
-              var button = document.getElementById("fancyyy");
-              var onee = document.getElementById("textfancy");
-              var twoo = document.getElementById("textfancy1");
-              var threee = document.getElementById("textfancy2");
-              var fourr = document.getElementById("textfancy3");
-
-              var first = ["Eat healthier!", "Stay physically active!", "Focus on prevention!", "Play a board game with family!", "Mindfulness."];
-              
-              var second = ["Eat more whole grains.", "Try to do an hour of exercise every day.", "Avoid things that increase risk of dangerous diseases, such as smoking or alcohol.", "This can give everyone a chance to socialise and can keep senior’s minds sharp.", "Pay attention to your body and its needs."];
-              
-              var third = ["Stay away from saturated fat.", "Even walking around a park can be beneficial", "", "", "Visit the doctor often to check up and make sure one’s body is healthy"];
-              
-              var fourth = ["", "Even better to do it with others. Socialising can further benefit mental health.", "", "", ""]
-              
-              var numm = Math.floor(Math.random() * Math.floor(5))
-              onee.innerHTML = first[num];
-              twoo.innerHTML = second[num];
-              threee.innerHTML = third[num];
-              fourr.innerHTML = fourth[num];
-          }
-        </script>
-        </div>
-        <div data-role="footer">
-            <a href="#TOS" data-role="button" data-transition="flip" class="button2">Terms of Service</a>
-            <a href="#PP" data-role="button" data-transition="flip" class="button2">Privacy Policy</a>
-            <a href="#contact" data-role="button" data-transition="flip" class="button2">Contact Us</a> 
-            <a href="#credits" data-role="button" data-transition="flip" class="button2">Credits</a>
-            <form class="form2" action="https://formspree.io/projecthealthdgs@gmail.com" method="POST">
-                <input name="name2" class="newsletter" placeholder="Full Name" type="text" required/>
-                <br/>
-                <input name="name2" class="newsletter" placeholder="Email" type="email" required/>
-                <button id="subscribe" type="submit">Subscribe for Healthy Living Tips </button>
-            </form>
-            <p id="c"> © 2019 Team Asclepius. All rights reserved. </p>
-        </div>
-    </div>
-
-
-
 <div data-role="page" id="info"> <!-- JEFFREY -->
   <div data-role="header">
     <div class="icon-bar">
       <a href="#home"><i class="fa fa-home"></i></a>
       <a href="#address"><i class="fa fa-address-book"></i></a>
-      <a href="#tips"><i class="fa fa-lightbulb-o"></i></a>
       <a class = "active" href="#info"><i class="fa fa-question-circle"></i></a>
     </div>
   </div>
@@ -1312,7 +1237,6 @@
             <div class="icon-bar">
                 <a href="#home"><i class="fa fa-home"></i></a>
                 <a href="#address"><i class="fa fa-address-book"></i></a>
-                <a href="#tips"><i class="fa fa-lightbulb-o"></i></a>
                 <a href="#info"><i class="fa fa-question-circle"></i></a>
                 
             </div>
@@ -1365,7 +1289,6 @@
             <div class="icon-bar">
                 <a href="#home"><i class="fa fa-home"></i></a>
                 <a href="#address"><i class="fa fa-address-book"></i></a>
-                <a href="#tips"><i class="fa fa-lightbulb-o"></i></a>
                 <a href="#info"><i class="fa fa-question-circle"></i></a>
                 
             </div>
@@ -1460,7 +1383,6 @@
             <div class="icon-bar">
                 <a href="#home"><i class="fa fa-home"></i></a>
                 <a href="#address"><i class="fa fa-address-book"></i></a>
-                <a href="#tips"><i class="fa fa-lightbulb-o"></i></a>
                 <a href="#info"><i class="fa fa-question-circle"></i></a>
             </div>
         </div>
@@ -1646,9 +1568,7 @@
             <div class="icon-bar">
                 <a href="#home"><i class="fa fa-home"></i></a>
                 <a href="#address"><i class="fa fa-address-book"></i></a>
-                <a href="#tips"><i class="fa fa-lightbulb-o"></i></a>
-                <a href="#info"><i class="fa fa-question-circle"></i></a>
-                
+                <a href="#info"><i class="fa fa-question-circle"></i></a>       
             </div>
         </div>
         <div role="main" class="ui-content" align="left">
