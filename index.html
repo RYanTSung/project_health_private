@@ -572,6 +572,8 @@
           }
           #fancyyy {
             background-image: linear-gradient(#227fa3, #977FFA);
+            size: 30%;
+            height: 25px;
           }
 
     </style>
@@ -1028,12 +1030,12 @@
         <h1> <span style="color: #59B3C2;">Project Health</span></h1>
         <hr/>
         <br/>
-        <h3><p id="textfancy"></p></h3>
+        <h3><p id="textfancy">Drink more water!</p></h3>
         <br>
-        <p id="textfancy1"></p>
+        <p id="textfancy1">Dehydration can take a toll on your energy levels.</p>
         <p id="textfancy2"></p>
         <p id="textfancy3"></p>
-        <button id="fancyyy" onclick="myFunction12345()" align="center">Get Healthy Living Tips</button>
+        <button id="fancyyy" onclick="myFunction12345()" align="center"><span style="color: #ffffff;">Get Healthy Living Tips</span></button>
 
 
         <script>
@@ -1044,15 +1046,15 @@
               var threee = document.getElementById("textfancy2");
               var fourr = document.getElementById("textfancy3");
 
-              var first = ["Drink more water!", "Eat healthier!", "Stay physically active!", "Focus on prevention!", "Play a board game with family!", "Mindfulness."];
+              var first = ["Eat healthier!", "Stay physically active!", "Focus on prevention!", "Play a board game with family!", "Mindfulness."];
               
-              var second = ["Dehydration can take a toll on your energy levels.", "Eat more whole grains.", "Try to do an hour of exercise every day.", "Avoid things that increase risk of dangerous diseases, such as smoking or alcohol.", "This can give everyone a chance to socialise and can keep senior’s minds sharp.", "Pay attention to your body and its needs."];
+              var second = ["Eat more whole grains.", "Try to do an hour of exercise every day.", "Avoid things that increase risk of dangerous diseases, such as smoking or alcohol.", "This can give everyone a chance to socialise and can keep senior’s minds sharp.", "Pay attention to your body and its needs."];
               
-              var third = ["", "Stay away from saturated fat.", "Even walking around a park can be beneficial", "", "", "Visit the doctor often to check up and make sure one’s body is healthy"];
+              var third = ["Stay away from saturated fat.", "Even walking around a park can be beneficial", "", "", "Visit the doctor often to check up and make sure one’s body is healthy"];
               
-              var fourth = ["", "", "Even better to do it with others. Socialising can further benefit mental health.", "", "", ""]
+              var fourth = ["", "Even better to do it with others. Socialising can further benefit mental health.", "", "", ""]
               
-              var numm = Math.floor(Math.random() * Math.floor(6)
+              var numm = Math.floor(Math.random() * Math.floor(5))
               onee.innerHTML = first[num];
               twoo.innerHTML = second[num];
               threee.innerHTML = third[num];
